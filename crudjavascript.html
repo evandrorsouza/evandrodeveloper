@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    
+  </head>
+  <body>
+
+    <h1>CRUD em Javascript</h1>
+    <h6>Digite os dados nos campos e clique em Create/Read para salvar na tabela. (Ex: ID 01, Nome: Laranja, Descrição: Fruta cítrica)</h6>
+    <h6>Para editar algum item, clique em Update.</h6>
+    <h6>Para deletar algum item clique em Delete e selecione o ID do item a ser deletado.</h6>
+ 
+    <input id="id" type="text" placeholder="ID">
+    <input id="nome" type="text" placeholder="Nome">
+    <input id="ocupacao" type="text" placeholder="Descrição">
+
+
+    <button id="botao" class="btn btn-primary">Create/Read</button>    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Update</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button>
+
+    <div class="tabela">
+      <table id="tabela1" cellpadding="5px" cellspacing="0">
+          
+          <thead>             
+              <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Descrição</th>                  
+              </tr>
+          </thead>
+          <tbody id="tbody">
+               <!-- <tr>
+                  <td> 1</td>
+                  <td>João</td>
+                  <td>teste</td>                 
+              </tr>  -->              
+          </tbody>
+      </table>
+    </div>     
+
+    <!-- modal deletar -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deletar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <h6 class="col-7"> Digite o ID do item para deletar: </h6> <input id="idmd" type="text" class="col-5" placeholder="id">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button id="botao2" type="button" class="btn btn-primary" data-bs-dismiss="modal">Deletar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- modal editar -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">Atualizar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6 >Digite o ID do item que deseja editar: </h6><input id="idm" type="text" placeholder="id"><br>
+            <h6 >Digite o novo nome do item: </h6><input id="nomem" type="text" placeholder="Nome"><br>
+            <h6 >Digite a nova descrição do item:  </h6><input id="ocupacaom" type="text" placeholder="Descrição">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button id="botao3" type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar alterações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- teste envio de email -->
+   <!--  <form id="jquery_form">
+      <input type="text" name="subject" placeholder="Assunto" /><br>
+      <textarea name="text" placeholder="Mensagem" ></textarea><br>
+      <input type="submit" name="send" value="Enviar" />       
+    </form> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js\scriptscrud.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>
