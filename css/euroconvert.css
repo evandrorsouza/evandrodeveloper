@@ -1,0 +1,26 @@
+body{
+    background-color: #4d4d4d;
+    color: deepskyblue;
+    text-align: center;
+    
+    }
+    
+    
+    .div1{
+    display: inline-block;
+    }
+    
+    /* #click-me{
+        height: 31px;    
+        margin-top: -5px;
+        text-align: center;
+    } */
+    
+    .real{
+        
+        float: right;
+        font-size: 20px;
+    }
+    #testeMoeda{
+        font-size: 20px;
+    }
