@@ -20,11 +20,8 @@ function pegar_cotacao(callback){
         },
         error: function(){
             alert("erro na requisição");
-        }
-
-        
+        }        
     });
-
 }
     
 function usar_cotacao(moeda){
