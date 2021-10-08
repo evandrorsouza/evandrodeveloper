@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\todolistvue.css">
+</head>
+<body>
+    <main id="app">            
+        <section class="todo-list">           
+            <h3>Lista de Tarefas</h3>            
+            <div class="all-todos">
+                <input type="text" placeholder="Digite uma nova tarefa..." v-model="novaTarefa.texto">
+                <button class="add" @click="addTarefa()">Adicionar</button>
+                <div
+                    v-for="tarefa in tarefas"
+                    class="single-todo"
+                    :class="{done : tarefa.feito}"
+                    @click="tarefa.feito = !tarefa.feito">
+                    <p>{{ tarefa.texto }}</p>
+                </div>
+            </div>
+            <button class="clear" @click="tarefas = []" v-if="tarefas.length">Limpar tudo</button>
+            <div class="instructions">
+                Instruções:
+                <ul>
+                    <li>Use o campo para adicionar novas tarefas</li>
+                    <li>Clique na tarefa para alternar entre feita / não feita</li>
+                    <li>Use o botão limpar tudo para remover todas as tarefas</li>                    
+                </ul>
+            </div>
+        </section>        
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js\todolistvue.js"></script>
+</body>
+</html>
