@@ -196,8 +196,9 @@ body{
 .caixa{
 	text-align: center;
 	margin-top: 15px;
+	color: black;
+	text-decoration:none;
 }
-
 
 
 .blackbox{

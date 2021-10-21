@@ -1,16 +1,17 @@
 body{
     background-color: #4d4d4d;
     color: deepskyblue;
-    text-align: center;    
-    }    
-    .div1{
-    display: inline-block;
-    }     
-    .real{
-        
-        float: right;
-        font-size: 20px;
-    }
-    #testeMoeda{
-        font-size: 20px;
-    }
+    text-align: center; 
+    margin-top: 25px;   
+}    
+.div1{
+display: inline-block;
+}     
+.real{
+    
+    float: right;
+    font-size: 20px;
+}
+#testeMoeda{
+    font-size: 20px;
+}
